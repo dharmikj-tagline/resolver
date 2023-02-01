@@ -3,7 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
-import { Observable } from 'rxjs';
 import { DataService } from 'src/app/services/data.service';
 
 @Component({
@@ -42,17 +41,12 @@ export class ApiFormComponent implements OnInit {
     private spinner: NgxSpinnerService,
     private route:ActivatedRoute
   ) {
-    // this.getData();
-    this.bookAll=this.route.snapshot.data['datas']
+    this.users=this.route.snapshot.data['datas']
   }
 
   ngOnInit(){
     this.formLoad()
     this.spinner.show();
-  
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 2000);
   }
 
   formLoad(){
@@ -69,11 +63,11 @@ export class ApiFormComponent implements OnInit {
     return this.form.controls;
   }
 
-  getData() {
-    this.data.dataGet().subscribe((res : any)=>{
-      this.users = res;
-    })
-  }
+  // getData() {
+  //   this.data.dataGet().subscribe((res : any)=>{
+  //     this.users = res;
+  //   })
+  // }
   
 
   saveUser() {
@@ -101,8 +95,8 @@ export class ApiFormComponent implements OnInit {
     this.userId = data.id;
   }
 
-}
-function userData(arg0: string, userData: any) {
-  throw new Error('Function not implemented.');
-}
+  ngOnDestroy(){
+    this.spinner.hide()
+  }
 
+}

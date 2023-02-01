@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ApiFormComponent } from './feature/api-form/api-form.component'; 
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HeaderComponent } from './feature/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HeaderComponent } from './feature/header/header.component';
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    NgxSpinnerModule.forRoot({ type: 'ball-scale-multiple' })
+    BrowserAnimationsModule,
+    NgxSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]
