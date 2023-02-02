@@ -8,12 +8,14 @@ import { ApiFormComponent } from './feature/api-form/api-form.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { HeaderComponent } from './feature/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { PipesComponent } from './feature/pipes/pipes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApiFormComponent,
-    HeaderComponent
+    HeaderComponent,
+    PipesComponent
   ],
   imports: [
     BrowserModule,

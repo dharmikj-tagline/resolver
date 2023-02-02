@@ -1,0 +1,49 @@
+<h1 class="text-center text-danger m-4">Pipes Implementation</h1>
+
+<div class="d-flex justify-content-between m-5">
+
+    <div>
+        <h3 class="fw-bold pb-4">Text Formates</h3>
+        <p>{{upperName | uppercase}}</p>
+        <p>{{ lowerName | lowercase}}</p>
+        <p>{{ titleName | titlecase}}</p>
+    </div>
+    <div>
+        <h3 class="fw-bold pb-4">Currency Formates</h3>
+        <p>USD : {{num1 | currency}} (Default)</p>
+        <p>India : {{num1 | currency : 'INR'}}</p>
+        <p> Euro : {{num1 | currency : 'EUR'}}</p>
+    </div>
+    <div>
+        <h3 class="fw-bold pb-4">Decimal Formates</h3>
+        <p>{{pi | number}}</p>
+        <p>{{pi | number:'3.2-5'}}</p>
+        <p>{{pi | number:'1.3'}}</p>
+        <p>{{pi | number:'1.3-6'}}</p>
+
+        <p>{{num2 | number:'':'en'}}</p>
+    </div>
+    <div>
+        <h3 class="fw-bold pb-4">Percent Formates</h3>
+        <p>{{ percent | percent}}</p>
+        <p>{{ percent | percent:'4.3-5'}}</p>
+        <p>{{ percent | percent:'2.2-5'}}</p>
+        <p>{{ percent | percent:'1.2-5'}}</p>
+    </div>
+    <div>
+        <h3 class="fw-bold pb-4">Date Formates</h3>
+        <p>{{date | date}}</p>
+        <p>{{date | date : 'short'}}</p>
+        <p>{{date | date : 'medium'}}</p>
+        <p>{{date | date : 'long'}}</p>
+        <p>{{date | date : 'full'}}</p>
+        <p>{{date | date : 'shortDate'}}</p>
+        <p>{{date | date : 'mediumDate'}}</p>
+        <p>{{date | date : 'longDate'}}</p>
+        <p>{{date | date : 'fullDate'}}</p>
+        <p>{{date | date : 'shortTime'}}</p>
+        <p>{{date | date : 'mediumTime'}}</p>
+        <p>{{date | date : 'longTime'}}</p>
+        <p>{{date | date : 'fullTime'}}</p>
+    </div>
+</div>

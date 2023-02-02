@@ -32,8 +32,7 @@ export class ApiFormComponent implements OnInit {
   private userId!: number;
   deleteId!: number;
   users!: any;
-  bookAll: any;
-
+  search!:string
   constructor(
     private data: DataService,
     private fb: FormBuilder,
