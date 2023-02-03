@@ -9,13 +9,19 @@ import { NgxSpinnerModule } from 'ngx-spinner';
 import { HeaderComponent } from './feature/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PipesComponent } from './feature/pipes/pipes.component';
+import { PipeFilterPipe } from './pipes/pipe-filter.pipe';
+import { PowerPipe } from './pipes/power.pipe';
+import { EllipsisPipe } from './pipes/ellipsis.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     ApiFormComponent,
     HeaderComponent,
-    PipesComponent
+    PipesComponent,
+    PipeFilterPipe,
+    PowerPipe,
+    EllipsisPipe,
   ],
   imports: [
     BrowserModule,
