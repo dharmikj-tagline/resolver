@@ -12,6 +12,7 @@ import { PipesComponent } from './feature/pipes/pipes.component';
 import { PipeFilterPipe } from './pipes/pipe-filter.pipe';
 import { PowerPipe } from './pipes/power.pipe';
 import { EllipsisPipe } from './pipes/ellipsis.pipe';
+import { SearchBoldPipe } from './pipes/search-bold.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { EllipsisPipe } from './pipes/ellipsis.pipe';
     PipeFilterPipe,
     PowerPipe,
     EllipsisPipe,
+    SearchBoldPipe,
   ],
   imports: [
     BrowserModule,

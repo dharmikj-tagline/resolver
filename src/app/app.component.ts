@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   title = 'resolver';
   ngOnInit() {
     AOS.init({
-      duration: 1200,
+      duration: 2000,
     });
   }
 }

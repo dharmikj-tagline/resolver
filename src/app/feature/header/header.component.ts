@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { NavigationEnd, NavigationStart, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
@@ -8,7 +9,16 @@ import { NgxSpinnerService } from 'ngx-spinner';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor(private spinner : NgxSpinnerService) { }
+  loading!:boolean;
+  constructor(private spinner : NgxSpinnerService,private router:Router) { 
+    router.events.subscribe(event => {
+      if(event instanceof NavigationStart) {
+        this.spinner.show();
+      }else if(event instanceof NavigationEnd) {
+        this.spinner.hide();
+      }
+    })
+  }
 
   ngOnInit() {
   }
@@ -16,4 +26,6 @@ export class HeaderComponent implements OnInit {
   getSpin(){
     this.spinner.show();
   }
+
+
 }

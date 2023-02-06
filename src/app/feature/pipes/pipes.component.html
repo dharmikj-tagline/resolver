@@ -10,7 +10,8 @@
 
 <div class="d-flex justify-content-center m-4">
 
-    <div class="col-lg-6 d-flex justify-content-center flex-wrap" style="border-right: 5px solid cadetblue;" data-aos="fade-right">
+    <div class="col-lg-6 d-flex justify-content-center flex-wrap" style="border-right: 5px solid cadetblue;"
+        data-aos="fade-right">
 
         <div class="m-5">
             <h3 class="fw-bold">Text Formates</h3>
@@ -115,9 +116,21 @@
         <hr>
 
         <h4>Text Ellipsis Pipe</h4>
-        <p>{{'Lorem ipsum dolor, sit amet consectetur adipisicing elit ' | ellipsis : 10 }}</p>
-        <p>{{'Lorem ipsum dolor sit' | ellipsis : 25}}</p>
+        <div class="form-group mb-4 m-4 d-flex col-6">
+            <input class="form-control" type="number" [(ngModel)]="ellipsis" placeholder="Enter Number to Ellipse">
+        </div>
+        <p><b> Full String is : </b>{{ellipStr}}</p>
+        <p><b>Ellipsed String : </b>{{ellipStr | ellipsis : ellipsis }}</p>
 
+        <hr>
+
+        <h3>Search Text Bold Pipe</h3>
+        <div class="form-group mb-4 m-4 d-flex col-6">
+            <input class="form-control" type="text" [(ngModel)]="boldWord" placeholder="Search Here ...">
+        </div>
+        <div *ngFor="let str of dummyStrArr | searchBold : boldWord ">
+            <p [innerHTML]="str.text"></p>
+        </div>
     </div>
 
 </div>
