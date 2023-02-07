@@ -14,7 +14,7 @@ export class SearchBoldPipe implements PipeTransform {
       .map((filter: any) => {
         const match = filter.text.match(new RegExp(search, 'gi'));
         return {
-          text: filter.text.replace(new RegExp(search, 'gi'),'<b>' + match[0] + '</b>'),
+          text: filter.text.replace(new RegExp(search, 'i'),'<b>' + match[0] + '</b>'),
         };
       });
   }

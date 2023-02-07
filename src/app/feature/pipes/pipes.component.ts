@@ -7,6 +7,11 @@ interface user {
   stream: string;
   description: string;
 }
+
+export interface dummyStr{
+  text:string
+}
+
 @Component({
   selector: 'app-pipes',
   templateUrl: './pipes.component.html',
@@ -29,26 +34,17 @@ export class PipesComponent implements OnInit {
   ellipsis!: number;
   ellipStr: string = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit';
 
-  // dummyStrArr: string[] = [
-  //   'This is the Search Value of input Box',
-  //   'Contrary to popular belief, Lorem Ipsum is not simply random text.',
-  //   'The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog.',
-  //   'my brave ghost pled',
-  //   'Cozy sphinx waves quart jug of bad milk',
-  // ];
-
-  dummyStrArr=[
+  dummyStrArr:dummyStr[]=[
     {
-      text: 'I am Dharmik'
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
     },
     {
-      text: 'I am Pratik'
+      text: 'Cras porta risus eu vulputate maximus.'
     },
     {
-      text: 'I am Jaydip'
+      text: 'Quisque sed lorem tincidunt, accumsan ex sit amet, hendrerit neque.'
     },
   ]
-
   
   userData: user[] = [
     {
